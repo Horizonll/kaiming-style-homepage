@@ -1,0 +1,25 @@
+# Jekyll configuration for the personal academic homepage.
+# On every push, GitHub Pages will run Jekyll with this config and serve
+# the resulting site at https://<username>.github.io/.
+
+title: Your Name | Personal Website
+description: Personal academic homepage
+author: Your Name
+
+# Use kramdown (GitHub Pages default) with GitHub-Flavored-Markdown input,
+# so syntax and line-break rules match what you see on github.com.
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Don't apply Jekyll's default front-matter defaults (we use explicit
+# `layout:` in index.md).
+defaults: []
+
+# Serve the project as the root of the user site. If you ever rename the
+# repo to something other than <username>.github.io, set `baseurl` to
+# "/<repo-name>" and prepend it to internal links.
+baseurl: ""
+url: ""

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="en-us" http-equiv="Content-Language">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>{{ page.title | default: site.title }}</title>
+
+	<!--
+		Page shell for the homepage. All editable content lives in index.md.
+		The CSS below reproduces the look of the original Kaiming He homepage
+		(Arial, gray text, indented list items) so that markdown content
+		renders identically to the old hand-written HTML.
+	-->
+
+	<style>
+		/* Page-level rules — kept compatible with the original layout. */
+		body {
+			width: fit-content;
+			margin: 0 auto;
+			font-family: Arial, sans-serif;
+		}
+
+		/* Section headers in markdown (`## Title`) — match the original
+		   <p><b><font face="Arial" size="4"><br>Title</font></b></p>. */
+		h2 {
+			font-family: Arial, sans-serif;
+			font-size: 14pt;
+			font-weight: bold;
+			margin-top: 1.2em;
+			margin-bottom: 0.4em;
+		}
+
+		/* Markdown-generated lists — match the original
+		   <p style="line-height: 150%; margin-left: 15px; ..."><font size="2">...</font></p>. */
+		ul {
+			padding-left: 40px;
+			margin: 0.4em 0;
+		}
+		ul li {
+			font-family: Arial, sans-serif;
+			font-size: 10pt;
+			line-height: 150%;
+		}
+		ul li > p {
+			margin: 0 0 0 0;
+		}
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#444444" text="#444444">
+	{{ content }}
+</body>
+</html>

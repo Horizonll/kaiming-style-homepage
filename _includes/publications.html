@@ -1,0 +1,21 @@
+<!-- Publications table — generated from _data/publications.yml -->
+<!-- To add/edit papers, just edit _data/publications.yml. Style is preserved here. -->
+<table border="1" id="table2" style="border-width: 0px;" width="960">
+	<tbody>
+		{% for pub in site.data.publications %}
+		<tr>
+			<td style="border-style: none; border-width: medium;" valign="top" width="19">&nbsp;</td>
+			<td bgcolor="#FFCC99" style="border-style: none; border-width: medium;" valign="top" width="14">&nbsp;</td>
+			<td style="border-style: none; border-width: medium;" valign="top" width="927">
+				<p style="margin-left: 10px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;">
+					<i><font face="Arial">{{ pub.title }}</font></i><br>
+					<font color="#000000" face="Arial" size="2">{{ pub.authors }}<br></font>
+					<font face="Arial" size="2">{{ pub.venue }}</font>
+					{% if pub.links and pub.links.size > 0 %}<br>
+					<font face="Arial" size="2">{% for link in pub.links %}{% if link.bold %}<b><a href="{{ link.url }}" style="color: #808080;">{{ link.text }}</a></b>{% else %}<a href="{{ link.url }}" style="color: #808080;">{{ link.text }}</a>{% endif %}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;{% endunless %}{% endfor %}</font>{% endif %}
+				</p>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

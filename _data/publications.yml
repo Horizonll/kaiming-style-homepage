@@ -1,0 +1,22 @@
+# Publications data — edit this file to add/remove papers.
+# The visual style (orange marker, Arial font, gray links) is preserved
+# by the template in _includes/publications.html.
+#
+# Format:
+#   title:    paper title (will be italicized)
+#   authors:  author list — wrap YOUR name in <b> tags for bold
+#   venue:    venue abbreviation and year
+#   links:    optional list of links (arXiv, code, project page, etc.)
+#             - text: link label
+#               url:  link URL
+#               bold: true (optional, makes the link bold)
+
+- title: "Your Paper Title"
+  authors: "<b>Your Name</b>*, Coauthor A, Coauthor B"
+  venue: "Conference Name, Year"
+  links:
+    - text: "arXiv"
+      url: "https://arxiv.org/abs/xxxx.xxxxx"
+    - text: "code"
+      url: "https://github.com/your-repo"
+      bold: true
